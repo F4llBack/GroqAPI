@@ -2,13 +2,6 @@
 
 A straightforward Java interface for the Groq API.
 
-**NOTE:**
-
-**THE 2 TYPES OF MESSAGES WILL GET MERGED INTO 1 IN A FUTURE UPDATE (MOST LIKELY TODAY) AS THEY CONTAIN THE SAME FIELDS**
-
-**I will rework the fields today to improve the api experience**
-
-
 ## Table of Contents
 
 - [Installation](#installation)
@@ -46,7 +39,7 @@ While getting a response in plain text can be useful in some cases, it only prov
 Groq groq = new Groq(apiKey, Model.DEFAULT);
 
 // Creating a Prompt
-RequestMessage prompt = new RequestMessage(Role.User, "How old is the universe?");
+Message prompt = new Message(Role.User, "How old is the universe?");
 
 // Getting a Response in plain Text
 String response = groq.createChatCompletionText(prompt);
@@ -61,10 +54,10 @@ If you need to give more information to the System how to handle/respond to a pr
 Groq groq = new Groq(apiKey, Model.DEFAULT);
 
 // Creating custom instructions that tell the System how to behave
-RequestMessage instruction = new RequestMessage(Role.System, "You can only speak German from now on");
+Message instruction = new Message(Role.System, "You can only speak German from now on");
 
 // Creating the Prompt
-RequestMessage prompt = new RequestMessage(Role.User, "How old is the universe?");
+Message prompt = new Message(Role.User, "How old is the universe?");
 
 // Getting a Response adujst as needed (see GroqResponse)
 String response = groq.createChatCompletionText(instruction, prompt);
@@ -81,19 +74,20 @@ The same Rules for custom instructions as for `createChatCompletionText` apply t
 Groq groq = new Groq(apiKey, Model.DEFAULT);
 
 // Creating custom instructions that tell the System how to behave
-RequestMessage instruction = new RequestMessage(Role.System, "You can only speak German from now on");
+Message instruction = new Message(Role.System, "You can only speak German from now on");
 
 // Creating the Prompt
-RequestMessage prompt = new RequestMessage(Role.User, "How old is the universe?");
+Message prompt = new Message(Role.User, "How old is the universe?");
 
 // Getting a GroqResponse
 GroqResponse response = groq.createChatCompletion(instruction, prompt);
 
 // Accessing information (see Available Information) 
-System.out.println(response.getChoices().get(0).getFinish_reason());
+System.out.println(response.getChoices().get(0).getFinishReason());
 ```
 
 ## Available Information
+**This is getting updated soon**
 
 `GroqResponse.java`
 | Field name         | Type         |
