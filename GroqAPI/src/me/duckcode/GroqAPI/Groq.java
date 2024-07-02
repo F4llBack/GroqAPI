@@ -30,23 +30,24 @@ public class Groq {
 	public GroqResponse createChatCompletion(RequestMessage... messages) {
 
 		try {
-			Gson gson = new Gson();
-			URL url = new URL(apiEndPoint);
 
+			Gson gson = new Gson();
 			GroqRequest request = new GroqRequest(Arrays.asList(messages), model);
 			String data = gson.toJson(request);
 
+			
+			URL url = new URL(apiEndPoint);
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-
 			connection.setRequestMethod("POST");
 			connection.setRequestProperty("Authorization", "Bearer " + apiKey);
 			connection.setRequestProperty("Content-Type", "application/json");
 			connection.setDoOutput(true);
 
+			
 			try (OutputStream os = connection.getOutputStream()) {
-				byte[] input = data.getBytes(StandardCharsets.UTF_8);
-				os.write(input, 0, input.length);
+				os.write(data.getBytes(StandardCharsets.UTF_8));
 			}
+			
 
 			StringBuilder response = new StringBuilder();
 			try (BufferedReader in = new BufferedReader(
@@ -57,9 +58,8 @@ public class Groq {
 				}
 			}
 
-			GroqResponse groqResponse = gson.fromJson(response.toString(), GroqResponse.class);
-
-			return groqResponse;
+			
+			return gson.fromJson(response.toString(), GroqResponse.class);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
