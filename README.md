@@ -85,9 +85,10 @@ RequestMessage instruction = new RequestMessage(Role.System, "You can only speak
 // Creating the Prompt
 RequestMessage prompt = new RequestMessage(Role.User, "How old is the universe?");
 
-// Getting a Response adujst as needed (see GroqResponse)
+// Getting a GroqResponse
 GroqResponse response = groq.createChatCompletion(instruction, prompt);
 
+// Accessing information (see Available Information) 
 System.out.println(response.getChoices().get(0).getFinish_reason());
 ```
 
