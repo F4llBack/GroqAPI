@@ -19,8 +19,7 @@ A simple Java interface for the Groq API.
 - [Usage](#usage)
 - [Recent Changes](#recent-changes)
 - [License](#license)
-- [Contributing](#contributing)
-- [Contact](#contact)
+- [Tested Gson versions](#tested-gson-versions)
 
 ## Installation
 
@@ -173,3 +172,6 @@ This project is licensed under a [Creative Commons Attribution-NonCommercial-Sha
 
 See [LICENSE](https://github.com/F4llBack/GroqAPI?tab=License-1-ov-file) for more information.
 
+## Tested Gson versions
+- Used to make the API: 2.11.0
+- Tested: 2.2.4 (Works fine)
