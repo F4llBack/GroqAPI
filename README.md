@@ -1,6 +1,6 @@
 # GroqAPI for Java
 
-A simple Java interface for the Groq API.
+A straightforward Java interface for the Groq API.
 
 **NOTE:**
 
@@ -20,6 +20,8 @@ A simple Java interface for the Groq API.
 - [Recent Changes](#recent-changes)
 - [License](#license)
 - [Tested Gson versions](#tested-gson-versions)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
 ## Installation
 
@@ -175,3 +177,9 @@ See [LICENSE](https://github.com/F4llBack/GroqAPI?tab=License-1-ov-file) for mor
 ## Tested Gson versions
 - Used to make the API: 2.11.0
 - Tested: 2.2.4 (Works fine)
+
+## Contributing
+If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+
+## Contact
+If you want to contact me feel free to write an email to waldoontop@gmail.com!
