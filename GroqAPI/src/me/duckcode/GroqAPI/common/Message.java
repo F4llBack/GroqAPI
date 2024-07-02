@@ -12,12 +12,12 @@ public class Message {
 		this.content = content;
 	}
 
-	public String getRole() {
-		return role;
+	public Role getRole() {		
+		return Role.fromSpecification(role);
 	}
 
-	public void setRole(String role) {
-		this.role = role;
+	public void setRole(Role role) {
+		this.role = role.getRoleSpecification();
 	}
 
 	public String getContent() {

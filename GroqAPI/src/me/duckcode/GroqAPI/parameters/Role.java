@@ -15,4 +15,13 @@ public enum Role {
 	public String getRoleSpecification() {
 		return roleSpecification;
 	}
+	
+	public static Role fromSpecification(String specification) {
+		for (Role role : Role.values()) {
+            if (role.getRoleSpecification().equalsIgnoreCase(specification)) {
+                return role;
+            }
+        }
+		throw new IllegalArgumentException();
+	}
 }
