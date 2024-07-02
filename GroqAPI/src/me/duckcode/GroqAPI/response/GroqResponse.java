@@ -37,11 +37,11 @@ public class GroqResponse {
 		return usage;
 	}
 
-	public String getSystem_fingerprint() {
+	public String getSystemFingerprint() {
 		return system_fingerprint;
 	}
 
-	public XGroq getX_groq() {
+	public XGroq getXGroq() {
 		return x_groq;
 	}
 }

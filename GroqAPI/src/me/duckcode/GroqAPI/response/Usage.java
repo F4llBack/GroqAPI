@@ -8,27 +8,27 @@ public class Usage {
 	public int total_tokens;
 	public double total_time;
 
-	public int getPrompt_tokens() {
+	public int getPromptTokens() {
 		return prompt_tokens;
 	}
 
-	public double getPrompt_time() {
+	public double getPromptTime() {
 		return prompt_time;
 	}
 
-	public int getCompletion_tokens() {
+	public int getCompletionTokens() {
 		return completion_tokens;
 	}
 
-	public double getCompletion_time() {
+	public double getCompletionTime() {
 		return completion_time;
 	}
 
-	public int getTotal_tokens() {
+	public int getTotalTokens() {
 		return total_tokens;
 	}
 
-	public double getTotal_time() {
+	public double getTotalTime() {
 		return total_time;
 	}
 
