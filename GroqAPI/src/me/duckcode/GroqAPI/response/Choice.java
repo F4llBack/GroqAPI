@@ -1,8 +1,10 @@
 package me.duckcode.GroqAPI.response;
 
+import me.duckcode.GroqAPI.common.Message;
+
 public class Choice {
 	public int index;
-	public ResponseMessage message;
+	public Message message;
 	public Object logprobs;
 	public String finish_reason;
 
@@ -10,7 +12,7 @@ public class Choice {
 		return index;
 	}
 
-	public ResponseMessage getMessage() {
+	public Message getMessage() {
 		return message;
 	}
 
@@ -18,7 +20,7 @@ public class Choice {
 		return logprobs;
 	}
 
-	public String getFinish_reason() {
+	public String getFinishReason() {
 		return finish_reason;
 	}
 

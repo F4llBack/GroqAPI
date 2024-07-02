@@ -1,13 +1,13 @@
-package me.duckcode.GroqAPI.request;
+package me.duckcode.GroqAPI.common;
 
 import me.duckcode.GroqAPI.parameters.Role;
 
-public class RequestMessage {
-
+public class Message {
+	
 	public String role;
 	public String content;
 
-	public RequestMessage(Role role, String content) {
+	public Message(Role role, String content) {
 		this.role = role.getRoleSpecification();
 		this.content = content;
 	}
@@ -27,5 +27,5 @@ public class RequestMessage {
 	public void setContent(String content) {
 		this.content = content;
 	}
-
+	
 }

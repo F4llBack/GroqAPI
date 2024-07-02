@@ -11,12 +11,10 @@ import java.util.Arrays;
 
 import com.google.gson.Gson;
 
-import me.duckcode.GroqAPI.parameters.Model;
-import me.duckcode.GroqAPI.request.GroqRequest;
-import me.duckcode.GroqAPI.request.RequestMessage;
-import me.duckcode.GroqAPI.response.Choice;
-import me.duckcode.GroqAPI.response.GroqResponse;
-import me.duckcode.GroqAPI.response.ResponseMessage;
+import me.duckcode.GroqAPI.common.*;
+import me.duckcode.GroqAPI.parameters.*;
+import me.duckcode.GroqAPI.request.*;
+import me.duckcode.GroqAPI.response.*;
 
 public class Groq {
 
@@ -29,7 +27,7 @@ public class Groq {
 		this.model = model;
 	}
 
-	public GroqResponse createChatCompletion(RequestMessage... messages) {
+	public GroqResponse createChatCompletion(Message... messages) {
 
 		try {
 
@@ -68,12 +66,12 @@ public class Groq {
 		return null;
 	}
 
-	public String createChatCompletionText(RequestMessage... messages) {
+	public String createChatCompletionText(Message... messages) {
 		GroqResponse groqResponse = createChatCompletion(messages);
 
 		if (groqResponse != null) {
 			Choice choice = groqResponse.getChoices().get(0);
-			ResponseMessage message = choice.getMessage();
+			Message message = choice.getMessage();
 			
 			return message.getContent();
 		}
