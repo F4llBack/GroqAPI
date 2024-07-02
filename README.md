@@ -138,6 +138,15 @@ System.out.println(response.getChoices().get(0).getFinishReason());
 
 
 ## Recent Changes
+**Documentation**:
+- Updated API Documentation to fit the latest changes
+- Added Contrebutions and Contact
+- Removed unused table of content stuff and added tested Gson versions
+
+**Api**:
+- Fixed Message taking a Role in constructor but not in setter and Message not returning a Role
+- Removed Duplicated Message Doc update soon
+- Updated Readme and deleted unused gson library
 - Refactor createChatCompletionText for more simplicity
 - Refactor createChatCompletion for more simplicity
 - Moved my old project file to my new Repository
