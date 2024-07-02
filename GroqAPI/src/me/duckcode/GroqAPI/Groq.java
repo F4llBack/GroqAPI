@@ -14,7 +14,9 @@ import com.google.gson.Gson;
 import me.duckcode.GroqAPI.parameters.Model;
 import me.duckcode.GroqAPI.request.GroqRequest;
 import me.duckcode.GroqAPI.request.RequestMessage;
+import me.duckcode.GroqAPI.response.Choice;
 import me.duckcode.GroqAPI.response.GroqResponse;
+import me.duckcode.GroqAPI.response.ResponseMessage;
 
 public class Groq {
 
@@ -67,11 +69,15 @@ public class Groq {
 	}
 
 	public String createChatCompletionText(RequestMessage... messages) {
-		GroqResponse response = createChatCompletion(messages);
+		GroqResponse groqResponse = createChatCompletion(messages);
 
-		if (response != null)
-			return response.getChoices().get(0).getMessage().getContent();
-
+		if (groqResponse != null) {
+			Choice choice = groqResponse.getChoices().get(0);
+			ResponseMessage message = choice.getMessage();
+			
+			return message.getContent();
+		}
+		
 		return "";
 	}
 
