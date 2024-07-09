@@ -26,7 +26,7 @@ A straightforward Java interface for the Groq API.
    - If you are using an IDE, you can usually add the JAR file to your project by right-clicking on your project folder, selecting `Properties` or `Build Path`, and then adding the JAR file under `Libraries`.
    - Alternatively, if you are using a build tool like Maven or Gradle, you can place the JAR file in a suitable directory and include it in your project's build configuration.
 
-3. **Download or add [Google Gson](https://github.com/jgravelle/GroqApiLibrary)**
+3. **Download [Google Gson](https://github.com/jgravelle/GroqApiLibrary) (Skip this if you are using maven)**
 4. **Add Gson to Your Project**
 
 ## Usage
@@ -87,7 +87,6 @@ System.out.println(response.getChoices().get(0).getFinishReason());
 ```
 
 ## Available Information
-**This is getting updated soon**
 
 `GroqResponse.java`
 | Field name         | Type         |
@@ -112,7 +111,7 @@ System.out.println(response.getChoices().get(0).getFinishReason());
 
 
 
-`ResponseMessage.java`
+`Message.java`
 | Field name         | Type            |
 |--------------------|--------------   |
 | role               | String          |
