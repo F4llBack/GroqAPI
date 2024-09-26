@@ -1,6 +1,7 @@
 # GroqAPI for Java
 
 A straightforward Java interface for the Groq API.
+NOTE: THIS IS A COMMUNITY MAINTAINED PROJECT
 
 ## Table of Contents
 
