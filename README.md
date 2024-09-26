@@ -1,6 +1,8 @@
 # GroqAPI for Java
 
-A straightforward Java interface for the Groq API.
+THIS HASEN'T BEEN UPDATED FOR SOME TIME DUE TO IRL STUFF! WORK WILL BE RESUMED ON THE 29th September 2024
+
+A straightforward Java interface for the Groq API.  
 NOTE: THIS IS A COMMUNITY MAINTAINED PROJECT
 
 ## Table of Contents
